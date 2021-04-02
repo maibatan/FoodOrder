@@ -64,4 +64,10 @@ public class DetailsActivity extends AppCompatActivity {
         if(temp>1)temp--;
         amount.setText(String.valueOf(temp));
     }
+    public  void onClickReturn(View v)
+    {
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
+
 }
