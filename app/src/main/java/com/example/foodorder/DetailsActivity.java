@@ -2,6 +2,7 @@ package com.example.foodorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,9 @@ public class DetailsActivity extends AppCompatActivity {
         foodPrice.setText(bundle.getString("Price"));
         ImageView imageView=(ImageView) findViewById(R.id.imageView7);
         imageView.setImageResource(Integer.parseInt(bundle.getString("Image")));
+        TextView detail=(TextView) findViewById(R.id.textView13);
+        detail.setText(bundle.getInt("Detail"));
+
 
     }
 

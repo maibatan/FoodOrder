@@ -62,6 +62,7 @@ public class PopularFoodAdapter extends RecyclerView.Adapter<PopularFoodAdapter.
                 i.putExtra("Name",popularFoodList.get(position).getName());
                 i.putExtra("Price",popularFoodList.get(position).getPrice());
                 i.putExtra("Image",popularFoodList.get(position).getImageUrl().toString());
+                i.putExtra("Detail",popularFoodList.get(position).getDetail());
                 context.startActivity(i);
             }
         });

@@ -3,6 +3,7 @@ package com.example.foodorder.model;
 public class AnotherFood {
     String name,price;
     Integer ImageUrl;
+
     String rating;
     String restaurantName;
 

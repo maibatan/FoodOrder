@@ -2,15 +2,16 @@ package com.example.foodorder.model;
 
 public class PopularFood {
     String name,price;
-    Integer ImageUrl;
+    Integer ImageUrl,detail;
 
     public PopularFood() {
     }
 
-    public PopularFood(String name, String price, Integer imageUrl) {
+    public PopularFood(String name, String price,Integer detail, Integer imageUrl){
         this.name = name;
         this.price = price;
         ImageUrl = imageUrl;
+        this.detail=detail;
 
     }
 
@@ -36,5 +37,8 @@ public class PopularFood {
 
     public void setImageUrl(Integer imageUrl) {
         ImageUrl = imageUrl;
+    }
+    public Integer getDetail() {
+        return detail;
     }
 }

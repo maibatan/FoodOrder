@@ -2,6 +2,7 @@ package com.example.foodorder.adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.foodorder.DetailsActivity;
 import com.example.foodorder.R;
 import com.example.foodorder.model.AnotherFood;
 
@@ -49,12 +51,25 @@ public class AnotherFoodAdapter extends RecyclerView.Adapter<AnotherFoodAdapter.
     }
 
     @Override
-    public void onBindViewHolder(AnotherFoodAdapter.AnotherFoodViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AnotherFoodAdapter.AnotherFoodViewHolder holder, int position) {
         holder.foodImage.setImageResource(anotherFoodList.get(position).getImageUrl());
         holder.name.setText(anotherFoodList.get(position).getName());
         holder.price.setText(anotherFoodList.get(position).getPrice());
         holder.rating.setText(anotherFoodList.get(position).getRating());
         holder.restaurantName.setText(anotherFoodList.get(position).getRestaurantName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("Name",anotherFoodList.get(position).getName());
+                i.putExtra("Price",anotherFoodList.get(position).getPrice());
+                i.putExtra("Image",anotherFoodList.get(position).getImageUrl().toString());
+                i.putExtra("Detail",R.string.den);
+                context.startActivity(i);
+            }
+        });
     }
 
 

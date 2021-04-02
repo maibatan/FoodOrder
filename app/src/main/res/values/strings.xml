@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FoodOrder</string>
-
+    <string name="den">Trà sữa đường đen ngon rẻ</string>
+    <string name="tra_sua_dau">"Trà sữa dâu được trình bày trong cốc nhựa, cho thực khách thưởng thức vẻ đẹp của màu hường cánh sen sữa kết hợp cùng những viên trân châu đen và trân châu sợi vàng óng."</string>
 </resources>
