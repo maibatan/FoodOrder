@@ -2,20 +2,19 @@ package com.example.foodorder.model;
 
 public class AnotherFood {
     String name,price;
-    Integer ImageUrl,detail;
+    Integer ImageUrl;
 
     String rating;
     String restaurantName;
 
 
 
-    public AnotherFood(String name, String price, Integer imageUrl, String rating, String restaurantName,Integer detail) {
+    public AnotherFood(String name, String price, Integer imageUrl, String rating, String restaurantName) {
         this.name = name;
         this.price = price;
         ImageUrl = imageUrl;
         this.rating = rating;
         this.restaurantName = restaurantName;
-        this.detail=detail;
     }
 
     public String getRating() {
@@ -57,5 +56,4 @@ public class AnotherFood {
     public void setImageUrl(Integer imageUrl) {
         ImageUrl = imageUrl;
     }
-    public  Integer getDetail() {return detail;}
 }
