@@ -3,8 +3,10 @@ package com.example.foodorder;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -13,6 +15,17 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+        Bundle bundle=getIntent().getExtras();
+
+
+
+        TextView food=(TextView) findViewById(R.id.textView12);
+        food.setText(bundle.getString("Name"));
+        TextView foodPrice=(TextView) findViewById(R.id.textView15);
+        foodPrice.setText(bundle.getString("Price"));
+        ImageView imageView=(ImageView) findViewById(R.id.imageView7);
+        imageView.setImageResource(Integer.parseInt(bundle.getString("Image")));
+
     }
 
     public void onClick(View v)

@@ -11,6 +11,7 @@ public class PopularFood {
         this.name = name;
         this.price = price;
         ImageUrl = imageUrl;
+
     }
 
     public String getName() {

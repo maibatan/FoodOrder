@@ -2,6 +2,7 @@ package com.example.foodorder.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,11 @@ public class PopularFoodAdapter extends RecyclerView.Adapter<PopularFoodAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("Name",popularFoodList.get(position).getName());
+                i.putExtra("Price",popularFoodList.get(position).getPrice());
+                i.putExtra("Image",popularFoodList.get(position).getImageUrl().toString());
                 context.startActivity(i);
             }
         });
