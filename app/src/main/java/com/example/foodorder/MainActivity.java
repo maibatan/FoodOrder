@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         // tạo list another food
         List<AnotherFood> anotherFoodList = new ArrayList<>();
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong"));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong",R.string.den));
 
         setAnotherRecycler(anotherFoodList);
     }
