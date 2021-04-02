@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         anotherFoodList.add(new AnotherFood("Bánh crepe","30.000đ",R.drawable.crepe,"5.0","ChingChong",R.string.crepe));
         anotherFoodList.add(new AnotherFood("Bánh sừng bò","30.000đ",R.drawable.sungbo,"5.0","ChingChong",R.string.banhSungBo));
         anotherFoodList.add(new AnotherFood("Bánh nếp cẩm","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong",R.string.banhNepCam));
+        anotherFoodList.add(new AnotherFood("Bánh ngọt kem sữa","30.000đ",R.drawable.banhngot,"5.0","ChingChong",R.string.banhKemSua));
 
         setAnotherRecycler(anotherFoodList);
     }
