@@ -15,6 +15,7 @@ public class AnotherFood {
         ImageUrl = imageUrl;
         this.rating = rating;
         this.restaurantName = restaurantName;
+        this.detail=detail;
     }
 
     public String getRating() {

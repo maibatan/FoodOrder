@@ -66,7 +66,7 @@ public class AnotherFoodAdapter extends RecyclerView.Adapter<AnotherFoodAdapter.
                 i.putExtra("Name",anotherFoodList.get(position).getName());
                 i.putExtra("Price",anotherFoodList.get(position).getPrice());
                 i.putExtra("Image",anotherFoodList.get(position).getImageUrl().toString());
-                i.putExtra("Detail",R.string.den);
+                i.putExtra("Detail",anotherFoodList.get(position).getDetail());
                 context.startActivity(i);
             }
         });
