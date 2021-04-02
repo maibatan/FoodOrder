@@ -2,4 +2,18 @@
     <string name="app_name">FoodOrder</string>
     <string name="den">Trà sữa đường đen ngon rẻ</string>
     <string name="tra_sua_dau">"Trà sữa dâu được trình bày trong cốc nhựa, cho thực khách thưởng thức vẻ đẹp của màu hường cánh sen sữa kết hợp cùng những viên trân châu đen và trân châu sợi vàng óng."</string>
+    <string name="thantre">Trà sữa than tre. Món trà sữa mới lạ này có màu đen đặc trưng của bột tinh than tre, khi kết hợp với vị béo thơm của sữa, mặn mặn của macchiato tạo nên hương vị thơm ngon khó cưỡng.</string>
+    <string name="kiwi">Trà xanh, dưỡng chất collagen và vitamin C không chỉ bổ sung dinh dưỡng, khoáng chất thiết yếu cho cơ thể, mà còn có tác dụng làm đẹp tuyệt vời.</string>
+    <string name="tranchau">Trà sữa trân châu là thức uống đã và đang được ưa chuộng. Dường như khi nhắc đến món đồ uống “quốc dân” này.</string>
+    <string name="hongtrabuoi">Trà bưởi là một sản phẩm hỗ trợ giảm cân hiệu quả, đẹp da được chiết xuất từ bưởi và sản xuất tại Hàn Quốc. Nước ép bưởi giảm cân của Hàn Quốc được các chị em xứ sở hoa anh đào đón nhận khá tích cực. </string>
+    <string name="tranchaubaby">Sữa tươi nguyên chất kết hợp cùng trân châu baby độc quyền hòa quyện với lớp kem café sánh mịn.</string>
+    <string name="khoaimon">Thưởng thức Trà sữa khoai môn hoàng kim ngọt thơm, sánh mịn này bạn sẽ cảm nhận được vị Hồng trà quyện sữa ngon tuyệt hảo, thú vị trong từng khoảnh khắc.</string>
+    <string name="honglongxoai">Không những “đẹp người” mà Hồng Long Xoài Trân Châu Baby còn thêm cái nết thiên nhiên đậm vị, thơm ngon bổ dưỡng và giàu vitamin.</string>
+    <string name="catcher"> Sản phẩm là sự hòa quyện giữa hương thơm đặc trưng của cà phê kết hợp với hương thơm đặc trưng từ topping creamcake.</string>
+    <string name="redVelet">Đúng như tên gọi của mình, những chiếc bánh Red Velvet mang một màu đỏ nhung thật nồng nàn, say đắm. Red Velvet là sự kết hợp hài hòa của từng lớp bánh đỏ thắm đan xen với những lớp kem trắng mịn, bồng bềnh trông thật thích mắt và ngon miệng. </string>
+    <string name="crepe">Được xuất xứ từ nước Pháp, một nơi có nền ẩm thực vô cùng phong phú và đa dạng. Là một loại bánh rất mỏng, dẹt, thường được làm từ bột mỳ, trứng, sữa và bơ. </string>
+    <string name="banhSungBo">Bánh sừng bò xốp mềm, ngậy thơm mùi bơ. Các nghệ nhân cho một khối lượng bơ khá lớn vào bột và gấp nó lại thật nhiều lần, bởi vậy bánh sừng bò có kết cấu rất xốp, thơm ngon ngậy béo.</string>
+    <string name="banhDau">Bánh kem dâu tây tuyệt ngon với kem tươi thơm ngậy và dâu tây tươi mát, ngọt ngào.</string>
+    <string name="banhNepCam">Bánh nếp cẩm tuyệt ngon với lớp nếp cẩm tươi thơm ngậy tươi mát.</string>
+    <string name="banhKemSua">Đặc biệt, với thành phần kem sữa tươi và các nguyên liệu hảo hạng khác, các loại bánh cake của Givral không hề béo, cho bạn cảm giác thơm ngon tươi mới.</string>
 </resources>
