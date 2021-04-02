@@ -30,21 +30,21 @@ public class MainActivity extends AppCompatActivity {
       //  popularFoodList.add(new PopularFood("Trà sữa socola", "20.000đ", R.drawable.socola));
      //   popularFoodList.add(new PopularFood("Trà sữa matcha", "25.000đ", R.drawable.matcha1));
       //  popularFoodList.add(new PopularFood("Trà sữa matcha đậu đỏ", "30.000đ", R.drawable.matcha));
-        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ",R.string.den, R.drawable.duongden));
-        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ",R.string.tra_sua_dau, R.drawable.dau));
-        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ",R.string.den ,R.drawable.duongden));
-        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ", R.string.tra_sua_dau,R.drawable.dau));
-        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ",R.string.den ,R.drawable.duongden));
-        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ", R.string.tra_sua_dau,R.drawable.dau));
+        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ", R.drawable.duongden,R.string.den));
+        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ", R.drawable.dau,R.string.tra_sua_dau));
+        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ",R.drawable.duongden,R.string.den ));
+        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ", R.drawable.dau,R.string.tra_sua_dau));
+        popularFoodList.add(new PopularFood("Trà sữa đường đen", "25.000đ",R.drawable.duongden,R.string.den ));
+        popularFoodList.add(new PopularFood("Trà sữa dâu", "30.000đ",R.drawable.dau, R.string.tra_sua_dau));
 
         setPopularRecycler(popularFoodList);
 
         // tạo list another food
         List<AnotherFood> anotherFoodList = new ArrayList<>();
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong"));
-        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong"));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhdau,"5.0","ChingChong",R.string.den));
+        anotherFoodList.add(new AnotherFood("Bánh dâu","30.000đ",R.drawable.banhnepcam,"5.0","ChingChong",R.string.den));
 
         setAnotherRecycler(anotherFoodList);
     }

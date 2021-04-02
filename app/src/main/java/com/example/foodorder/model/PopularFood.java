@@ -7,7 +7,7 @@ public class PopularFood {
     public PopularFood() {
     }
 
-    public PopularFood(String name, String price,Integer detail, Integer imageUrl){
+    public PopularFood(String name, String price, Integer imageUrl,Integer detail){
         this.name = name;
         this.price = price;
         ImageUrl = imageUrl;
