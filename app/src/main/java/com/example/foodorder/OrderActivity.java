@@ -2,7 +2,6 @@ package com.example.foodorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -29,26 +28,25 @@ public class OrderActivity extends AppCompatActivity {
     }
     public void onClick(View v) {
         EditText numerPhone =(EditText) findViewById(R.id.editTextNumber);
-        if(!numerPhone.getText().equals("") )
+        EditText name =(EditText) findViewById(R.id.editTextName);
+        if(!numerPhone.getText().equals("")&&!name.getText().equals("")  )
         {
             Bundle bundle=getIntent().getExtras();
             String amount=bundle.getString("amount");
             String dishes=bundle.getString("dishes");
+
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage("0707160100", null,
-                    "I want "+amount+" "+dishes+"\nMy numer phone is "+numerPhone.getText(),
+                    "My name is "+name+ ". My numer phone is "+numerPhone.getText()+"\nI want "+amount+" "+dishes,
 
                     null, null);
-
-
-
-        }
-        else {
+            onClickReturn(v);
 
         }
+
     }
     public void onClickReturn(View v) {
-        Intent intent=new Intent(getApplicationContext(),DetailsActivity.class);
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intent);
     }
 
