@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.foodorder.DetailsActivity;
+import com.example.foodorder.MainActivity;
 import com.example.foodorder.R;
 import com.example.foodorder.model.Food;
 
@@ -69,6 +70,7 @@ public class AnotherFoodAdapter extends RecyclerView.Adapter<AnotherFoodAdapter.
                 i.putExtra("Detail",anotherFoodList.get(position).getDetail());
                 i.putExtra("Title",anotherFoodList.get(position).getTitle());
                 i.putExtra("Rating",anotherFoodList.get(position).getRating());
+
                 context.startActivity(i);
             }
         });

@@ -18,6 +18,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
     RecyclerView popularRecycler,anotherRecycler;
     PopularFoodAdapter popularFoodAdapter;
     AnotherFoodAdapter anotherFoodAdapter;

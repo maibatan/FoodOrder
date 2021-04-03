@@ -2,6 +2,7 @@ package com.example.foodorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import com.example.foodorder.model.Cart_Item;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -35,16 +38,20 @@ public class OrderActivity extends AppCompatActivity {
 
 
         if (!name.getText().toString().equals("") && !numerPhone.getText().toString().equals("")) {
-
-                Bundle bundle = getIntent().getExtras();
-                String amount = bundle.getString("Amount");
-                String dishes = bundle.getString("Name");
-
-
-
-
+            CartActivity.Empty();
             String phoneNumber = "5556";
-            String message = "My name is " + name.getText() + ". My numer phone is " + numerPhone.getText() + "\n" + amount + " " + dishes;
+            String message = "My name is " + name.getText() + ". My numer phone is " + numerPhone.getText();
+
+            Bundle bundle = getIntent().getExtras();
+            int size=bundle.size()/2;
+            for (int i=0;i<size;i++)
+            {
+                message+="\n"+bundle.getString("Amount"+i)+" "+bundle.getString("Name"+i);
+            }
+
+
+
+
             Intent intent = new Intent(Intent.ACTION_SENDTO,
 
                     Uri.parse("sms:" + phoneNumber));
