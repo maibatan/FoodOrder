@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,26 +22,61 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-        TextView food=(TextView) findViewById(R.id.textView12);
+        TextView food=(TextView) findViewById(R.id.foodName);
         food.setText(bundle.getString("Name"));
         TextView foodPrice=(TextView) findViewById(R.id.textView15);
         foodPrice.setText(bundle.getString("Price"));
         ImageView imageView=(ImageView) findViewById(R.id.imageView7);
         imageView.setImageResource(Integer.parseInt(bundle.getString("Image")));
-        TextView detail=(TextView) findViewById(R.id.textView13);
+        TextView detail=(TextView) findViewById(R.id.detail);
         detail.setText(bundle.getInt("Detail"));
+        TextView title=(TextView) findViewById(R.id.tilte);
+        title.setText(bundle.getString("Title"));
+        TextView rating=(TextView) findViewById(R.id.rating);
+        rating.setText(bundle.getString("Rating"));
 
+        ImageButton plus= (ImageButton) findViewById(R.id.plus);
+        ImageButton del= (ImageButton) findViewById(R.id.del);
+        plus.setOnClickListener(this::onClickPlus);
+        del.setOnClickListener(this::onClickDel);
 
     }
 
     public void onClick(View v)
     {
-        Intent intent =new Intent(getApplicationContext(), OrderActivity.class);
-        TextView amount=(TextView) findViewById(R.id.textView14);
-        TextView dishes=(TextView) findViewById(R.id.textView12);
-        intent.putExtra("amount",amount.getText());
-        intent.putExtra("dishes",dishes.getText());
+        Intent intent =new Intent(getApplicationContext(), CartActivity.class);
+
+        TextView amount=(TextView) findViewById(R.id.amount);
+        intent.putExtra("Amount",amount.getText().toString());
+
+
+        Bundle bundle=getIntent().getExtras();
+        intent.putExtra("Name",bundle.getString("Name"));
+        intent.putExtra("Image",bundle.getString("Image"));
+        intent.putExtra("Price",bundle.getString("Price"));
+
+
         startActivity(intent);
+    }
+    public void onClickPlus(View v)
+    {
+        TextView amount=(TextView) findViewById(R.id.amount);
+        int temp=Integer.parseInt(amount.getText().toString());
+        temp++;
+        amount.setText(String.valueOf(temp));
+    }
+    public void onClickDel(View v)
+    {
+        TextView amount=(TextView) findViewById(R.id.amount);
+        int temp=Integer.parseInt(amount.getText().toString());
+        if(temp>1)temp--;
+        amount.setText(String.valueOf(temp));
+    }
+    public  void onClickReturn(View v)
+    {
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+
     }
 
 }

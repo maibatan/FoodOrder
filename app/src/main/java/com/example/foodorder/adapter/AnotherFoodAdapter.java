@@ -14,16 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.foodorder.DetailsActivity;
+import com.example.foodorder.MainActivity;
 import com.example.foodorder.R;
-import com.example.foodorder.model.AnotherFood;
+import com.example.foodorder.model.Food;
 
 
 import java.util.List;
 public class AnotherFoodAdapter extends RecyclerView.Adapter<AnotherFoodAdapter.AnotherFoodViewHolder>{
     Context context;
-    List<AnotherFood> anotherFoodList;
+    List<Food> anotherFoodList;
 
-    public AnotherFoodAdapter(Context context, List<AnotherFood> anotherFoodList) {
+    public AnotherFoodAdapter(Context context, List<Food> anotherFoodList) {
         this.context = context;
         this.anotherFoodList = anotherFoodList;
     }
@@ -67,6 +68,9 @@ public class AnotherFoodAdapter extends RecyclerView.Adapter<AnotherFoodAdapter.
                 i.putExtra("Price",anotherFoodList.get(position).getPrice());
                 i.putExtra("Image",anotherFoodList.get(position).getImageUrl().toString());
                 i.putExtra("Detail",anotherFoodList.get(position).getDetail());
+                i.putExtra("Title",anotherFoodList.get(position).getTitle());
+                i.putExtra("Rating",anotherFoodList.get(position).getRating());
+
                 context.startActivity(i);
             }
         });
