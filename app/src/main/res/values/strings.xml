@@ -16,4 +16,13 @@
     <string name="banhDau">Bánh kem dâu tây tuyệt ngon với kem tươi thơm ngậy và dâu tây tươi mát, ngọt ngào.</string>
     <string name="banhNepCam">Bánh nếp cẩm tuyệt ngon với lớp nếp cẩm tươi thơm ngậy tươi mát.</string>
     <string name="banhKemSua">Đặc biệt, với thành phần kem sữa tươi và các nguyên liệu hảo hạng khác, các loại bánh cake của Givral không hề béo, cho bạn cảm giác thơm ngon tươi mới.</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

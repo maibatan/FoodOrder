@@ -3,6 +3,7 @@ package com.example.foodorder;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.SmsManager;
@@ -16,6 +17,7 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_order);
         Button btn=(Button) findViewById(R.id.order);
         btn.setOnClickListener(this::onClick);
@@ -33,20 +35,24 @@ public class OrderActivity extends AppCompatActivity {
 
 
         if (!name.getText().toString().equals("") && !numerPhone.getText().toString().equals("")) {
-            try {
+
                 Bundle bundle = getIntent().getExtras();
-                String amount = bundle.getString("amount");
-                String dishes = bundle.getString("dishes");
+                String amount = bundle.getString("Amount");
+                String dishes = bundle.getString("Name");
 
-                SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage("0707160100", null,
-                        "My name is " + name + ". My numer phone is " + numerPhone.getText() + "\nI want " + amount + " " + dishes,
 
-                        null, null);
-                onClickReturn(v);
-            } catch (Exception e) {
-                System.out.println("Input is null ");
-            }
+
+
+            String phoneNumber = "5556";
+            String message = "My name is " + name.getText() + ". My numer phone is " + numerPhone.getText() + "\n" + amount + " " + dishes;
+            Intent intent = new Intent(Intent.ACTION_SENDTO,
+
+                    Uri.parse("sms:" + phoneNumber));
+
+            intent.putExtra("sms_body", message);
+            startActivity(intent);
+
+
         }
     }
 

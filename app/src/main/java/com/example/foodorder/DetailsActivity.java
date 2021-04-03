@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -43,11 +44,18 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void onClick(View v)
     {
-        Intent intent =new Intent(getApplicationContext(), OrderActivity.class);
+        Intent intent =new Intent(getApplicationContext(), CartActivity.class);
+
         TextView amount=(TextView) findViewById(R.id.amount);
-        TextView dishes=(TextView) findViewById(R.id.foodName);
-        intent.putExtra("amount",amount.getText());
-        intent.putExtra("dishes",dishes.getText());
+        intent.putExtra("Amount",amount.getText().toString());
+
+
+        Bundle bundle=getIntent().getExtras();
+        intent.putExtra("Name",bundle.getString("Name"));
+        intent.putExtra("Image",bundle.getString("Image"));
+        intent.putExtra("Price",bundle.getString("Price"));
+
+
         startActivity(intent);
     }
     public void onClickPlus(View v)
@@ -68,6 +76,7 @@ public class DetailsActivity extends AppCompatActivity {
     {
         Intent intent=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intent);
+
     }
 
 }
